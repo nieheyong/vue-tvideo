@@ -1,0 +1,48 @@
+@import "../../scss/variables.scss";
+.select-piece {
+    display: flex;
+    flex-wrap: wrap;
+    color: $main-color;
+    font-size: 13px;
+    margin: 5px 0;
+    .name {
+        display: block;
+        margin: 5px 0;
+        color: $main-color-darker;
+        width: 45px;
+        text-align: justify;
+        text-align-last: justify;
+        &::after {
+            display: inline-block;
+            content: '';
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+        }
+    }
+    .maohao {
+        display: block;
+        margin: 5px 10px 5px 3px;
+    }
+    .piece-container {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        .items {
+            cursor: pointer;
+            margin: 2px 0;
+            height: 20px;
+            display: block;
+            padding: 3px 11px;
+            border-radius: 10px;
+            &:hover,
+            {
+                color: $active-color;
+            }
+            &.active {
+                color: $active-color;
+                background: $darker-background;
+            }
+        }
+    }
+}

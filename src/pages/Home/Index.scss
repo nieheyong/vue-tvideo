@@ -1,0 +1,20 @@
+@import "../../scss/variables.scss";
+.home-page {
+    position: relative;
+    .main-container {
+        margin: 20px auto;
+        padding-bottom: 30px;
+        .category-box {
+            margin-top: 15px;
+            .category-name {
+                display: block;
+                font-size: 18px;
+                padding: 10px 0 5px 10px;
+                color: $main-color-lighter;
+            }
+            .content {
+                display: flex;
+            }
+        }
+    }
+}

@@ -1,0 +1,83 @@
+@import "../../scss/variables.scss";
+.common-page {
+    padding: 10px 0;
+    font-size: 13px;
+    position: relative;
+
+    .container {
+        margin: 0 auto;
+        .filter-container {
+            padding-left: 10px;
+            display: flex;
+            .filterleft {
+                flex: 1;
+                max-height: 30px;
+                overflow: hidden;
+                &.expand {
+                    max-height: inherit;
+                }
+            }
+            .filterright {
+                margin-top: 5px;
+                .expand-filter {
+                    display: block;
+                    line-height: 26px;
+                    font-size: 12px;
+                    height: 26px;
+                    padding: 0 15px;
+                    color: $main-color-lighter;
+                    background: $lighter-background;
+                    border-radius: 13px;
+                    cursor: pointer;
+                    .material-icons {
+                        transition: transform 0.5s;
+                    }
+                    &.active {
+                        color: $active-color;
+                        .material-icons {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
+        }
+        .devider {
+            margin: 10px 0 20px;
+            height: 1px;
+            background: #34363a;
+        }
+        .top-bar {
+            display: flex;
+            color: $main-color-darker;
+            margin: 10px 0;
+            .left {
+                .piece {
+                    margin: 0 5px;
+                    padding: 3px 10px;
+                    cursor: pointer;
+                    &:hover {
+                        color: $main-color;
+                    }
+                    &.active {
+                        color: $main-color;
+                        border-radius: 20px;
+                        background: $lighter-background;
+                    }
+                }
+            }
+            .right {
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+                .number {
+                    padding: 0 5px;
+                    color: $main-color-lighter;
+                }
+            }
+        }
+        .videos-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}

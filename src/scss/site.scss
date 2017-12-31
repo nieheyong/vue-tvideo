@@ -1,0 +1,131 @@
+@import "variables.scss";
+*,
+*::before,
+*::after {
+    outline: none;
+    box-sizing: border-box;
+}
+
+html {
+    color: $main-color;
+    background: $main-background;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer
+}
+
+a:active,
+a:visited,
+a[tabindex='-1']:focus {
+    outline: 0 none
+}
+
+a:hover {
+    outline: 0 none;
+    text-decoration: none
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: #666;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+ ::-webkit-scrollbar-track,
+ ::-webkit-scrollbar-track-piece,
+ ::-webkit-scrollbar-corner,
+ ::-webkit-scrollbar-button,
+ ::-webkit-resizer {
+    display: none;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../assets/MaterialIcons/MaterialIcons-Regular.eot");
+    /* For IE6-8 */
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url("../assets/MaterialIcons/MaterialIcons-Regular.woff2") format('woff2'), url("../assets/MaterialIcons/MaterialIcons-Regular.woff") format('woff'), url("../assets/MaterialIcons/MaterialIcons-Regular.ttf") format('truetype');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: inherit;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+    /* Rules for sizing the icon. */
+    &.md-icon-18 {
+        font-size: 18px;
+    }
+    &.md-icon-24 {
+        font-size: 24px;
+    }
+    &.md-icon-30 {
+        font-size: 30px;
+    }
+    &.md-icon-36 {
+        font-size: 36px;
+    }
+    &.md-icon-48 {
+        font-size: 48px;
+    }
+    /* Rules for using icons as black on a light background. */
+    &.md-icon-dark {
+        color: rgba(0, 0, 0, 0.54);
+    }
+    &.md-icon-dark.md-icon-inactive {
+        color: rgba(0, 0, 0, 0.26);
+    }
+    /* Rules for using icons as white on a dark background. */
+    &.md-icon-light {
+        color: rgba(255, 255, 255, 1);
+    }
+    &.md-icon-light.md-icon-inactive {
+        color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+@keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+.fa-spin {
+    animation: fa-spin 0.5s infinite linear;
+}
+
+.icon-button {
+    cursor: pointer;
+    &:hover {
+        color: $active-color;
+    }
+}
