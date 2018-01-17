@@ -1,7 +1,7 @@
 <template>
   <div class="side-navbar">
     <div class="nav-box">
-      <div :style="{transform:'translateY('+ (34 * activeIndex +11) +'px)'}" class="nav-slide"></div>
+      <div :style="{transform:'translateY('+ (34 * activeIndex +11) +'px)'}" class="nav-slider"></div>
       <div v-for="(item, index) in navbarItems" :key="item" class="nav-item">
         <div @click="menuClicked(item,index)" :class="{'selected':index==activeIndex}" class="nav-item-text">
           {{item}}

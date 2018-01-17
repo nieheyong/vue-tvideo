@@ -4,12 +4,14 @@
     flex-wrap: wrap;
     color: $main-color;
     font-size: 13px;
-    margin: 5px 0;
+    line-height: 20px;
+    margin: 6px 0;
     .name {
         display: block;
-        margin: 5px 0;
+        margin-top: 5px;
         color: $main-color-darker;
         width: 45px;
+        height: 20px;
         text-align: justify;
         text-align-last: justify;
         &::after {
@@ -22,7 +24,10 @@
     }
     .maohao {
         display: block;
-        margin: 5px 10px 5px 3px;
+        margin-top: 5px;
+        height: 20px;
+        padding-left: 3px;
+        padding-right: 8px;
     }
     .piece-container {
         display: flex;
@@ -30,10 +35,10 @@
         flex-wrap: wrap;
         .items {
             cursor: pointer;
-            margin: 2px 0;
+            margin-top: 5px;
             height: 20px;
             display: block;
-            padding: 3px 11px;
+            padding: 0px 11px;
             border-radius: 10px;
             &:hover,
             {

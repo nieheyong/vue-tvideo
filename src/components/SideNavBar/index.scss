@@ -1,47 +1,44 @@
 @import "../../scss/variables.scss";
-
 .side-navbar {
-  user-select: none;
-  width: $sideNav-width;
-  min-width: $sideNav-width;
-  background: $sideNav-background;
-  padding-top: 20px;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  &::-webkit-scrollbar-thumb {
-    background: #000;
-    border: solid 3px  $sideNav-background;
-  }
-  &::-webkit-scrollbar {
+    user-select: none;
+    width: $sideNav-width;
+    min-width: $sideNav-width;
     background: $sideNav-background;
-    width: 14px;
-  }
-  .nav-box {
-    padding-left: 25px;
-    position: relative;
-    .nav-slide {
-      position: absolute;
-      left: 15px;
-      width: 2px;
-      height: 14px;
-      background: $active-color;
-      will-change: transform;
-      transform: translateY(-999px);
-      transition: transform 0.4s cubic-bezier(0.38, 0.46, 0.76, 1.51);
+    padding-top: 20px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar-thumb {
+        background: #000;
+        border: solid 3px $sideNav-background;
     }
-    .nav-item {
-      height: 34px;
-      font-size: 14px;
-      padding: 10px 0;
-      .nav-item-text {
-        cursor: pointer;
-        &.selected {
-          color: $active-color;
-        }
-        &:hover {
-          color: $active-color;
-        }
-      }
+    &::-webkit-scrollbar {
+        background: $sideNav-background;
+        width: 14px;
     }
-  }
+    .nav-box {
+        padding-left: 25px;
+        position: relative;
+        .nav-slider {
+            position: absolute;
+            left: 15px;
+            width: 2px;
+            height: 14px;
+            background: $active-color;
+            will-change: transform;
+            transform: translateY(-999px);
+            transition: transform 0.4s cubic-bezier(0.38, 0.46, 0.76, 1.51);
+        }
+        .nav-item {
+            height: 34px;
+            font-size: 14px;
+            padding: 10px 0;
+            .nav-item-text {
+                cursor: pointer;
+                &.selected,
+                &:hover {
+                    color: $active-color;
+                }
+            }
+        }
+    }
 }

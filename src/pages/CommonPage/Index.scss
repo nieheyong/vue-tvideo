@@ -3,7 +3,6 @@
     padding: 10px 0;
     font-size: 13px;
     position: relative;
-
     .container {
         margin: 0 auto;
         .filter-container {
@@ -11,7 +10,7 @@
             display: flex;
             .filterleft {
                 flex: 1;
-                max-height: 30px;
+                max-height: 31px;
                 overflow: hidden;
                 &.expand {
                     max-height: inherit;
@@ -20,7 +19,8 @@
             .filterright {
                 margin-top: 5px;
                 .expand-filter {
-                    display: block;
+                    display: flex;
+                    align-items: center;
                     line-height: 26px;
                     font-size: 12px;
                     height: 26px;
@@ -31,6 +31,8 @@
                     cursor: pointer;
                     .material-icons {
                         transition: transform 0.5s;
+                        display: block;
+                        margin-left: 3px;
                     }
                     &.active {
                         color: $active-color;
