@@ -14,9 +14,9 @@
 </template>
 
 <script>
-import TopLoading from "@/components/TopLoading";
-import HeadSlideShow from "@/components/HeadSlideShow";
-import VideoCard from "@/components/VideoCard";
+import TopLoading from "@/components/TopLoading/Index";
+import HeadSlideShow from "@/components/HeadSlideShow/Index";
+import VideoCard from "@/components/VideoCard/Index";
 import getVideos from "@/api";
 export default {
   name: "Home",

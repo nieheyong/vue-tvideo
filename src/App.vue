@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import SideNavbar from "@/components/SideNavbar";
-import Topbar from "@/components/Topbar";
+import SideNavbar from "@/components/SideNavBar/Index";
+import Topbar from "@/components/TopBar/Index";
 import { throttle } from "./utils/index";
 export default {
   name: "app",

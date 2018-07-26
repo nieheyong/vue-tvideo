@@ -39,9 +39,9 @@
 </template>
 
 <script>
-import VideoCard from "@/components/VideoCard";
-import SelectPiece from "@/components/SelectPiece";
-import TopLoading from "@/components/TopLoading";
+import VideoCard from "@/components/VideoCard/Index";
+import SelectPiece from "@/components/SelectPiece/Index";
+import TopLoading from "@/components/TopLoading/Index";
 
 import getVideos from "@/api";
 export default {
