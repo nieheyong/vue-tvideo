@@ -11,7 +11,8 @@ script:
 
 deploy:
   provider: pages
+  skip-cleanup: true
   github-token: $GITHUB_TOKEN
-  local-dir: /home/travis/build/nieheyong/vue-tvideo/dist
+  local-dir: dist
   on:
     branch: master
