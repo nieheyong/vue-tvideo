@@ -7,13 +7,11 @@ install:
   - npm install
 
 script:
-  - ls
   - npm run build
-  - ls
 
 deploy:
   provider: pages
   github-token: $GITHUB_TOKEN
-  # local-dir: dist
+  local-dir: /home/travis/build/nieheyong/vue-tvideo/dist
   on:
     branch: master
