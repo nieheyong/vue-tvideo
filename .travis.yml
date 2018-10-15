@@ -12,6 +12,6 @@ script:
 deploy:
   provider: pages
   github-token: $GITHUB_TOKEN
-  local-dir: ./dist
+  local-dir: dist
   on:
     branch: master
