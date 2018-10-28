@@ -48,22 +48,22 @@
 
 <script>
 export default {
-  name: "Topbar",
+  name: 'Topbar',
   data() {
     return {
       showSeachHelper: false,
       hotSearchs: [
-        "柒个我",
-        "羞羞的铁拳",
-        "极光之恋",
-        "致我们单纯的小美好",
-        "熊出没之探险日记",
-        "花谢花飞花满天",
-        "龙日一你死定了"
+        '柒个我',
+        '羞羞的铁拳',
+        '极光之恋',
+        '致我们单纯的小美好',
+        '熊出没之探险日记',
+        '花谢花飞花满天',
+        '龙日一你死定了'
       ],
-      recentSearchs: ["柒个我", "羞羞的铁拳", "极光之恋", "龙日一你死定了", "熊出没之探险日记"]
-    };
+      recentSearchs: ['柒个我', '羞羞的铁拳', '极光之恋', '龙日一你死定了', '熊出没之探险日记']
+    }
   }
-};
+}
 </script>
 <style src="./index.scss" lang="scss" scoped></style>

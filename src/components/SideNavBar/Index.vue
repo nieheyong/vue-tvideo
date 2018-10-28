@@ -13,53 +13,52 @@
 
 <script>
 export default {
-  name: "SideNavbar",
+  name: 'SideNavbar',
   data() {
     return {
       navbarItems: [
-        "精选",
-        "电视剧",
-        "电影",
-        "VIP会员",
-        "综艺",
-        "动漫",
-        "音乐",
-        "纪录片",
-        "微电影",
-        "体育",
-        "NBA"
+        '精选',
+        '电视剧',
+        '电影',
+        'VIP会员',
+        '综艺',
+        '动漫',
+        '音乐',
+        '纪录片',
+        '微电影',
+        '体育',
+        'NBA'
       ],
       activeIndex: 0
-    };
+    }
   },
   watch: {
     $route(to, from) {
-      this.updateActiveIndex(to);
+      this.updateActiveIndex(to)
     }
   },
   mounted() {
-    this.updateActiveIndex(this.$route);
+    this.updateActiveIndex(this.$route)
   },
   beforeRouteUpdate(to) {
-    this.updateActiveIndex(to);
+    this.updateActiveIndex(to)
   },
   methods: {
     updateActiveIndex: function(route) {
-      if (route.name == "home") {
-        this.activeIndex = 0;
-      } else if (route.name == "category") {
-        this.activeIndex = this.navbarItems.indexOf(route.params.categoryName);
+      if (route.name === 'home') {
+        this.activeIndex = 0
+      } else if (route.name === 'category') {
+        this.activeIndex = this.navbarItems.indexOf(route.params.categoryName)
       }
     },
     menuClicked: function(item, index) {
-      if (item == "精选") {
-        this.$router.push("/");
+      if (item === '精选') {
+        this.$router.push('/')
       } else {
-        this.$router.push({ name: "category", params: { categoryName: item } });
+        this.$router.push({ name: 'category', params: { categoryName: item } })
       }
     }
   }
-};
+}
 </script>
 <style src="./index.scss" lang="scss" scoped></style>
-

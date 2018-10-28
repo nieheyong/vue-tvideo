@@ -47,21 +47,21 @@
 
 <script>
 export default {
-  name: "VideoCard",
+  name: 'VideoCard',
   data() {
     return {
       showDetail: false
-    };
+    }
   },
   computed: {
     backgroundImage: function() {
-      return { "background-image": "url(" + this.videoInfo.coverImg + ")" };
-      return this.showDetail
-        ? {}
-        : { "background-image": "url(" + this.videoInfo.coverImg + ")" };
+      return { 'background-image': 'url(' + this.videoInfo.coverImg + ')' }
+      // return this.showDetail
+      //   ? {}
+      //   : { 'background-image': 'url(' + this.videoInfo.coverImg + ')' }
     }
   },
-  props: ["videoInfo"]
-};
+  props: ['videoInfo']
+}
 </script>
 <style src="./index.scss" lang="scss" scoped></style>

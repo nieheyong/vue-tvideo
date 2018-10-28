@@ -10,20 +10,19 @@
 
 <script>
 export default {
-  name: "SelectPiece",
+  name: 'SelectPiece',
   data() {
     return {
       activeIndex: 0
-    };
+    }
   },
   methods: {
     select: function(option, index) {
-      this.activeIndex = index;
-      this.$emit("change", option);
+      this.activeIndex = index
+      this.$emit('change', option)
     }
   },
-  props: ["options", "name"]
-};
+  props: ['options', 'name']
+}
 </script>
 <style src="./index.scss" lang="scss" scoped></style>
-

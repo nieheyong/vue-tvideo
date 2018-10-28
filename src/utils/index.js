@@ -1,46 +1,46 @@
-//https://github.com/angus-c/just/blob/master/packages/function-debounce/index.js
+// https://github.com/angus-c/just/blob/master/packages/function-debounce/index.js
 export function debounce(fn, wait, callFirst) {
-  var timeout;
+  var timeout
   return function () {
     if (!wait) {
-      return fn.apply(this, arguments);
+      return fn.apply(this, arguments)
     }
-    var context = this;
-    var args = arguments;
-    var callNow = callFirst && !timeout;
-    clearTimeout(timeout);
+    var context = this
+    var args = arguments
+    var callNow = callFirst && !timeout
+    clearTimeout(timeout)
     timeout = setTimeout(function () {
-      timeout = null;
+      timeout = null
       if (!callNow) {
-        return fn.apply(context, args);
+        return fn.apply(context, args)
       }
-    }, wait);
+    }, wait)
 
     if (callNow) {
-      return fn.apply(this, arguments);
+      return fn.apply(this, arguments)
     }
-  };
+  }
 }
-//https://github.com/vasanthk/js-utils/blob/master/js/throttle.js
+// https://github.com/vasanthk/js-utils/blob/master/js/throttle.js
 export function throttle(fn, interval, callFirst) {
-  var wait = false;
-  var callNow = false;
+  var wait = false
+  var callNow = false
   return function () {
-    callNow = callFirst && !wait;
-    var context = this;
-    var args = arguments;
+    callNow = callFirst && !wait
+    var context = this
+    var args = arguments
     if (!wait) {
-      wait = true;
+      wait = true
       setTimeout(function () {
-        wait = false;
+        wait = false
         if (!callFirst) {
-          return fn.apply(context, args);
+          return fn.apply(context, args)
         }
-      }, interval);
+      }, interval)
     }
     if (callNow) {
-      callNow = false;
-      return fn.apply(this, arguments);
+      callNow = false
+      return fn.apply(this, arguments)
     }
-  };
+  }
 }

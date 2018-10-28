@@ -12,25 +12,25 @@
 </template>
 
 <script>
-import SideNavbar from "@/components/SideNavBar/Index";
-import Topbar from "@/components/TopBar/Index";
-import { throttle } from "./utils/index";
+import SideNavbar from '@/components/SideNavBar/Index'
+import Topbar from '@/components/TopBar/Index'
+import { throttle } from './utils/index'
 export default {
-  name: "app",
+  name: 'app',
   components: {
     SideNavbar,
     Topbar
   },
   mounted() {
-    var self = this;
+    var self = this
     var getAppRightWidth = function() {
-      var width = window.getComputedStyle(self.$refs.rightBox)["width"];
-      self.$store.commit("updateAppRightWidth", Number.parseInt(width, 10));
-    };
-    window.addEventListener("resize", throttle(getAppRightWidth, 300));
-    getAppRightWidth();
+      var width = window.getComputedStyle(self.$refs.rightBox)['width']
+      self.$store.commit('updateAppRightWidth', Number.parseInt(width, 10))
+    }
+    window.addEventListener('resize', throttle(getAppRightWidth, 300))
+    getAppRightWidth()
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

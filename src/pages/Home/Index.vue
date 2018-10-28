@@ -14,36 +14,36 @@
 </template>
 
 <script>
-import TopLoading from "@/components/TopLoading/Index";
-import HeadSlideShow from "@/components/HeadSlideShow/Index";
-import VideoCard from "@/components/VideoCard/Index";
-import getVideos from "@/api";
+import TopLoading from '@/components/TopLoading/Index'
+import HeadSlideShow from '@/components/HeadSlideShow/Index'
+import VideoCard from '@/components/VideoCard/Index'
+import getVideos from '@/api'
 export default {
-  name: "Home",
+  name: 'Home',
   data() {
     return {
       categorys: [],
       loading: false
-    };
+    }
   },
   components: { TopLoading, HeadSlideShow, VideoCard },
   mounted() {
-    let self = this;
-    let categoryNames = ["电影大片", "电视剧", "动漫", "音乐", "微电影"];
+    let self = this
+    let categoryNames = ['电影大片', '电视剧', '动漫', '音乐', '微电影']
     let promiseList = categoryNames.map(function() {
-      return getVideos(20);
-    });
-    self.loading = true;
+      return getVideos(20)
+    })
+    self.loading = true
     Promise.all(promiseList).then(function(res) {
-      self.loading = false;
+      self.loading = false
       categoryNames.forEach((name, i) => {
         self.categorys.push({
           name: name,
           videos: res[i]
-        });
-      });
-    });
+        })
+      })
+    })
   }
-};
+}
 </script>
 <style scoped  src="./Index.scss" lang="scss"></style>

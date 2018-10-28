@@ -10,27 +10,26 @@
 
 <script>
 export default {
-  name: "TopLoading",
+  name: 'TopLoading',
   data() {
     return {
       showLoading: false
-    };
+    }
   },
   watch: {
     isLoading(newVal, oldVal) {
       if (newVal) {
-        this.timeOut && window.clearTimeout(this.timeOut);
-        this.showLoading = true;
+        this.timeOut && window.clearTimeout(this.timeOut)
+        this.showLoading = true
       } else {
         this.timeOut = window.setTimeout(
           () => (this.showLoading = false),
           1000
-        );
+        )
       }
     }
   },
-  props: ["isLoading"]
-};
+  props: ['isLoading']
+}
 </script>
 <style src="./index.scss" lang="scss" scoped></style>
-
