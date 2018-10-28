@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/",
+  "start_url": "/vue-tvideo",
   "display": "standalone",
   "background_color": "#191919",
   "theme_color": "#191919"
