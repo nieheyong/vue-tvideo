@@ -43,7 +43,7 @@ import VideoCard from '@/components/VideoCard/Index'
 import SelectPiece from '@/components/SelectPiece/Index'
 import TopLoading from '@/components/TopLoading/Index'
 
-import getVideos from '@/api'
+import getVideos from '@/common/api'
 export default {
   name: 'CommonPage',
   data() {

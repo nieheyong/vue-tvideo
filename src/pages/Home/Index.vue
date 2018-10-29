@@ -17,7 +17,7 @@
 import TopLoading from '@/components/TopLoading/Index'
 import HeadSlideShow from '@/components/HeadSlideShow/Index'
 import VideoCard from '@/components/VideoCard/Index'
-import getVideos from '@/api'
+import getVideos from '@/common/api'
 export default {
   name: 'Home',
   data() {

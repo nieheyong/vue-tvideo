@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <SideNavbar/>
+    <SideNavbar />
     <div class="side-nav-padding"></div>
     <div class="app-right-container">
       <div ref="rightBox" class="app-right">
@@ -14,7 +14,8 @@
 <script>
 import SideNavbar from '@/components/SideNavBar/Index'
 import Topbar from '@/components/TopBar/Index'
-import { throttle } from './utils/index'
+import { throttle } from './common/utils'
+
 export default {
   name: 'app',
   components: {
@@ -34,7 +35,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./scss/variables.scss";
+@import './scss/variables.scss';
 #app {
   height: 100vh;
   display: flex;
