@@ -44,6 +44,8 @@ export default {
 }
 
 .app-right-container {
+  background: $main-background;
+  border-top-left-radius: 4px;
   flex: 1;
   -webkit-overflow-scrolling: touch;
   overflow-x: auto;
