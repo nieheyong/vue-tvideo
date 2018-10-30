@@ -37,7 +37,8 @@ export default {
 <style lang="scss" scoped>
 @import './scss/variables.scss';
 #app {
-  height: 100vh;
+  height: 100%;
+  min-width: $app-min-width;
   display: flex;
   flex-direction: row;
 }
@@ -51,7 +52,6 @@ export default {
 .app-right {
   height: 100%;
   display: flex;
-  min-width: ($app-min-width - $sideNav-width);
   flex-direction: column;
 }
 .router-view {
