@@ -141,6 +141,12 @@
       font-size: 30px;
       border-radius: 50%;
       background: $lighter-background;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        background: #aaa;
+      }
     }
   }
 }
