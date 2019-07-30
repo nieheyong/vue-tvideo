@@ -6,11 +6,11 @@
 
 This is a PWA that copy [Tencent video Mac version](http://v.qq.com/download.html#mac) UI,could install on the desktop,made with vue.
 
-[Mac screenshot](https://user-images.githubusercontent.com/9368693/48835708-cedc2000-edbb-11e8-8079-14c191774c53.png)
+![Mac screenshot](https://user-images.githubusercontent.com/9368693/48835708-cedc2000-edbb-11e8-8079-14c191774c53.png)
 
 > Screenshot from Google Chrome canary 72 version on Mac
 
-[windows screenshot](https://user-images.githubusercontent.com/9368693/47719662-d3169100-dc86-11e8-82b9-c4faf3d10c78.png)
+![windows screenshot](https://user-images.githubusercontent.com/9368693/47719662-d3169100-dc86-11e8-82b9-c4faf3d10c78.png)
 
 > Screenshot from Google Chrome version 70 on windows
 
